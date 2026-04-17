@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <footer className=" text-center mt-4s">
+      <footer className=" text-center mb-4s">
         <p>© Mimi's Restaurant 2026. All rights reserved</p>
         <div className="d-flex justify-content-center gap-3">
           <FaLinkedin className="icon" />

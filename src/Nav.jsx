@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 
 function CustomNavbar() {
   return (
@@ -20,6 +21,7 @@ function CustomNavbar() {
           <NavLink to="/reservation">Reservation</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </Nav>
+        <FaBars className="Bars" />
       </Container>
     </Navbar>
   );

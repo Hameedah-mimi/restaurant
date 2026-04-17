@@ -19,15 +19,13 @@ import steak from "./assets/steak.jpg";
 import platter from "./assets/platter.jpg";
 import alfredo from "./assets/ckickenalfredo.jpg";
 import CustomNavbar from "./Nav";
+import Footer from "./Footer";
 
 function Menu() {
   return (
     <div className="menu-wrapper">
       <CustomNavbar />
-      <section
-        className="grids"
-        style={{ backgroundColor: "#F2B6A0", textAlign: "center" }}
-      >
+      <section className="grids" style={{ textAlign: "center" }}>
         <h2>Our Menu</h2>
         <p>Enjoy our delicious breakfast, lunch, and dinner options</p>
         <Container>
@@ -193,6 +191,7 @@ function Menu() {
           </Row>
         </Container>
       </section>
+      <Footer />
     </div>
   );
 }
