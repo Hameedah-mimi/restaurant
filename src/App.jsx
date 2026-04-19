@@ -4,6 +4,7 @@ import Header from "./Header";
 import Features from "./Features";
 import Body from "./Body";
 import Footer from "./Footer";
+import Reviews from "./Reviews";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Features />
       <Body />
+      <Reviews />
       <Footer />
     </div>
   );

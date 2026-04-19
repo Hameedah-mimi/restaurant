@@ -10,8 +10,7 @@ function Cards({
   btnText = "Order Now",
 }) {
   return (
-    <div>
-
+    <div className="autoShow">
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={image} />
 

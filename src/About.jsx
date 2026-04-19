@@ -42,7 +42,7 @@ function About() {
                 locally sourced ingredients to bring you unforgettable taste.
               </p>
 
-              <Button className="mt-3">
+              <Button className="about-btn mt-3">
                 <a href="/menu"> View Menu</a>
               </Button>
             </Col>

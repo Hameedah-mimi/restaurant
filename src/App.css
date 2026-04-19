@@ -1,19 +1,134 @@
-.Navbar {
+.custom-navbar {
+  background: #803d3b;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* BRAND */
+.brand span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #eee;
+  letter-spacing: 1px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* LINKS */
+.links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
   background-color: #803d3b;
-  display: flex;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.links a:hover::after {
   width: 100%;
+}
+
+.links a:hover {
+  color: #c79a95;
 }
 .Bars {
   display: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
 }
+
 .btn-feat {
   color: #000;
+}
+.footer {
+  background-color: #803d3b;
+  color: aliceblue;
+  padding: 50px;
 }
 .links {
   display: flex;
   margin-left: 350px;
   gap: 30px;
   color: #111;
+}
+.reviews-section {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card styling */
+.review-card {
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+
+  transform: scale(0.9);
+  opacity: 0;
+
+  transition: all 0.6s ease;
+}
+.swiper-slide-active .review-card {
+  transform: scale(1);
+  opacity: 1;
+}
+.swiper-slide-next .review-card,
+.swiper-slide-prev .review-card {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+.review-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+}
+.review-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #803d3b;
+}
+.swiper-pagination-bullet {
+  background: #a16760;
+  opacity: 0.5;
+}
+.swiper-wrapper-custom {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
 }
 .app {
   background-color: #c79a95;
@@ -26,7 +141,21 @@ a {
   color: white;
   text-decoration: none;
 }
-
+.autoShow {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
+}
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 2;
+    transform: translateY(0);
+  }
+}
 .header-images {
   height: 90vh;
   object-fit: cover;
@@ -74,6 +203,16 @@ a {
 
 .header-button:hover {
   background-color: #803d3b;
+  color: #ddd;
+}
+.about-btn {
+  color: #000;
+  background-color: #803d3b;
+  text-decoration: none;
+  padding: #803d3b 2px solid;
+}
+.about-btn:hover {
+  background-color: #c79a95;
   color: #ddd;
 }
 .body-wrapper {
@@ -131,6 +270,10 @@ a {
   height: 500px;
   object-fit: cover;
   border-radius: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+.hero-image img:hover {
+  transform: scale(1.05);
 }
 .custom {
   padding: 60px 80px;
@@ -142,46 +285,45 @@ a {
   height: 500px;
   object-fit: cover;
   border-radius: 30px;
+  transition: transform 0.5s ease-in-out;
 }
-/* FULL PAGE FIX (NO BOTTOM SPACE) */
-.contact-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #c79a95;
+.custom-img:hover {
+  transform: scale(1.05);
 }
 
-/* SECTION FULL HEIGHT */
 .contact-section {
-  flex: 1;
-
-  padding: 60px 20px;
+  position: relative;
 }
-
-/* CONTACT INFO BOX */
+.contact-section .container {
+  z-index: 2;
+}
 .contact-info {
-  color: #000;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
 }
 
-/* FORM CARD */
 .contact-form {
-  border-radius: 15px;
+  background: #ffffff15;
+  border-radius: 20px;
 }
 
-/* BUTTON */
 .contact-btn {
   background-color: #803d3b;
   border: none;
-  padding: 12px;
-  font-weight: 500;
-  transition: 0.3s ease;
+  padding: 10px;
+  font-weight: 600;
 }
 
 .contact-btn:hover {
   background-color: #a16760;
   color: #111;
-  padding: #803d3b 2px solid;
+}
+.contact-info,
+.contact-form {
+  position: relative;
+  z-index: 2;
+  border-radius: 15px;
 }
 /* FULL PAGE FIX */
 .reservation-wrapper {
@@ -363,24 +505,100 @@ section:last-child {
   padding-bottom: 20px !important;
   margin-bottom: 0 !important;
 }
+.none {
+  display: none;
+}
+/* SECTION BACKGROUND */
+.reservation-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #c79a95;
+  padding: 60px 0;
+}
+
+/* IMAGE STYLING */
+.reservation-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  height: 450px;
+}
+
+/* CARD */
+.reservation-card {
+  background-color: #9b6d68;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.reservation-card:hover {
+  transform: translateY(-5px);
+}
+
+/* BUTTONS */
+.reservation-btn {
+  background-color: #803d3b;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.reservation-btn:hover {
+  background-color: #a16760;
+}
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
   .app {
     width: 100%;
   }
+  .mobile-nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #803d3b;
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-nav li {
+    margin-bottom: 10px;
+  }
+
+  .mobile-nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .mobile-nav a:hover {
+    color: #c79a95;
+  }
   .links {
     display: none;
   }
   .Bars {
-    display: inline-block;
-    margin-left: auto;
-  }
-  /* NAVBAR */
-  .Navbar {
-    padding: 10px 20px;
+    display: block;
   }
 
-  /* REMOVE BAD SPACING */
+  .reservation-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .reservation-image img {
+    height: 250px;
+  }
+
+  .reservation-card {
+    margin-top: 20px;
+  }
   .links {
     margin-left: 0 !important;
   }

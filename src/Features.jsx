@@ -39,23 +39,27 @@ function Features() {
   ];
 
   return (
-    <div className="feature-row">
-      {features.map((item, index) => (
-        <div className="feature-col" key={index}>
-          <Card className="feature-card h-100 border-0 shadow-sm">
-            <Card.Body className="text-center">
-              <img
-                src={item.img}
-                alt={item.title}
-                style={{ width: "170px", marginBottom: "15px" }}
-              />
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text>{item.text}</Card.Text>
-              <p style={{ color: "green", fontWeight: "bold" }}>{item.link}</p>
-            </Card.Body>
-          </Card>
-        </div>
-      ))}
+    <div className="autoShow">
+      <div className="feature-row">
+        {features.map((item, index) => (
+          <div className="feature-col" key={index}>
+            <Card className="feature-card h-100 border-0 shadow-sm">
+              <Card.Body className="text-center">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  style={{ width: "170px", marginBottom: "15px" }}
+                />
+                <Card.Title>{item.title}</Card.Title>
+                <Card.Text>{item.text}</Card.Text>
+                <p style={{ color: "green", fontWeight: "bold" }}>
+                  {item.link}
+                </p>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

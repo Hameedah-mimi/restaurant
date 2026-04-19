@@ -2,34 +2,35 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import CustomNavbar from "./Nav";
 import Footer from "./Footer";
+import reserve from "./assets/reservation2.jpg";
 
 function Reservation() {
   return (
     <div className="reservation-wrapper">
       <CustomNavbar />
 
-      {/* FULL PAGE SECTION */}
-      <section className="reservation-section d-flex align-items-center">
+      <section className="reservation-section">
         <Container>
-          <Row className="justify-content-center">
-            <Col md={8} className="text-center">
-              {/* HEADER */}
+          <Row className="align-items-center">
+            {/* IMAGE SIDE */}
+            <Col md={6} className="mb-4 mb-md-0">
+              <div className="reservation-image">
+                <img src={reserve} alt="reservation" />
+              </div>
+            </Col>
+
+            {/* TEXT SIDE */}
+            <Col md={6}>
               <h1 className="fw-bold mb-3">Make a Reservation</h1>
               <p className="text-muted mb-4">
                 Reserve your table and enjoy a memorable dining experience at
                 Mimi's Restaurant.
               </p>
 
-              {/* CARD */}
-              <div className="reservation-card p-4 shadow-sm mx-auto">
-                <p className="mb-3">
-                  To ensure we serve you better, we recommend booking in
-                  advance, especially during peak hours and special occasions.
-                </p>
-
+              <div className="reservation-card p-4 shadow">
                 <h5 className="mb-3">Reservation Details</h5>
 
-                <ul className="list-unstyled text-start mb-4">
+                <ul className="list-unstyled mb-4">
                   <li>✔ Full Name</li>
                   <li>✔ Preferred Date</li>
                   <li>✔ Time of Reservation</li>
@@ -37,19 +38,14 @@ function Reservation() {
                   <li>✔ Contact Information</li>
                 </ul>
 
-                <p className="mb-4">
-                  Our team will confirm your reservation as soon as possible.
-                </p>
-
-                {/* BUTTONS */}
-                <div className="d-flex justify-content-center gap-3 flex-wrap">
+                <div className="d-flex gap-3 flex-wrap">
                   <Button href="tel:+2349024725100" className="reservation-btn">
                     Call Us
                   </Button>
 
                   <Button
                     href="mailto:mimirestaurant@email.com"
-                    className="reservation-btn"
+                    className="reservation-btn outline"
                   >
                     Email Us
                   </Button>
@@ -59,6 +55,7 @@ function Reservation() {
           </Row>
         </Container>
       </section>
+
       <Footer />
     </div>
   );

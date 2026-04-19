@@ -6,7 +6,7 @@ import food2 from "./assets/cooking1.jpg";
 function Body() {
   return (
     <div className="body-wrapper">
-      <section className="hero">
+      <section className="hero autoShow">
         <div className="hero-text">
           <h1>
             A Variety of <br /> Meals to choose from
@@ -26,7 +26,7 @@ function Body() {
           <img src={food1} alt="food" />
         </div>
       </section>
-      <Container className="custom">
+      <Container className="custom autoShow">
         <Row className="align-items-center">
           <Col md={6} className="col-image order-2 order-md-1 mt-4 mt-md-0">
             <img src={food2} alt="food" className="custom-img" />

@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import kitchen from "./assets/restaurant3.jpg";
+import kitchen from "./assets/Image_fx.png";
 import Daytime from "./assets/restaurant4.jpg";
 import Dinner from "./assets/restaurant1.jpg";
 
