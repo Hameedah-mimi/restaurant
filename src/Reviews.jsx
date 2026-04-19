@@ -5,7 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "./app.css";
+import "./App.css";
 
 import user1 from "./assets/user1.jpg";
 import user2 from "./assets/user2.jpg";
