@@ -142,6 +142,10 @@ a {
   color: white;
   text-decoration: none;
 }
+.color-body {
+  background-color: #a16760;
+  color: #111;
+}
 .autoShow {
   animation: text-appear both;
   animation-timeline: view();
