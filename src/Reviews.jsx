@@ -33,12 +33,14 @@ function Reviews() {
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={30}
+            centeredSlides={true}
+            loop={true}
             slidesPerView={1}
             pagination={{ clickable: true }}
             autoplay={{ delay: 3500 }}
             breakpoints={{
               768: { slidesPerView: 2 },
-              992: { slidesPerView: 3 },
+              1024: { slidesPerView: 3 },
             }}
           >
             {reviews.map((review, index) => (

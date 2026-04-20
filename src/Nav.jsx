@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
-import logo1 from "./assets/logo1.png";
+import logo2 from "./assets/logo2.png";
 
 function CustomNavbar() {
   const [showNav, setShowNav] = useState(false);
@@ -14,7 +14,7 @@ function CustomNavbar() {
       <Container>
         {/* LOGO + BRAND */}
         <Navbar.Brand className="brand d-flex align-items-center">
-          <img src={logo1} alt="Mimi's Kitchen" className="logo me-2" />
+          <img src={logo2} alt="Mimi's Kitchen" className="logo me-2" />
           <span>Mimi’s Kitchen</span>
         </Navbar.Brand>
 
