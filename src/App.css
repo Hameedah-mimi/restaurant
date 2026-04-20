@@ -314,15 +314,31 @@ a {
 }
 
 .contact-btn {
+  width: 100%;
+  padding: 12px 20px;
   background-color: #803d3b;
-  border: none;
-  padding: 10px;
+  color: #fff;
+  font-size: 16px;
   font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-btn:hover {
+  background-color: #c79a95;
+  color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.contact-btn:active {
+  transform: scale(0.98);
 }
 
-.contact-btn:hover {
-  background-color: #a16760;
-  color: #111;
+.contact-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 .contact-info,
 .contact-form {
